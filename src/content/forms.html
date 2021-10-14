@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Admin Panel</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Theme-fonts -->
+	<link rel="stylesheet" href="assets/css/feather.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+	<!-- Date-Dropper css -->
+	<link rel="stylesheet" type="text/css" href="assets/plugins/datedropper/datedropper.min.css" />
+	<!-- Image-Upload css -->
+	<link rel="stylesheet" type="text/css" href="assets/plugins/image-upload/bootstrap-imageupload.min.css" />
+	<!-- Required css -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+	<!-- Theme main-wrapper start -->
+	<div class="sd-main-wrapper">
+		<!-- Top-header start -->
+		<nav class="sd-header-navbar">
+			<div class="header-wrapper">
+				<div class="header-logo">
+					<img class="img-fluid theme-logo" src="assets/images/logo.png" alt="Theme-logo">
+				</div>
+				<div class="header-container container-fluid">
+					<ul class="float-left list-unstyled">
+						<li>
+							<a href="#!">
+								<i class="feather icon-search"></i>
+							</a>
+						</li>
+					</ul>
+					<ul class="float-right list-unstyled">
+						<li class="notifications">
+							<a class="bell-noti" href="#!">
+								<i class="feather icon-bell"></i>
+								<span class="badge sd-badge">2</span>
+							</a>
+							<ul>
+								<li class="heading">
+									NOTIFICATIONS<span class="badge sd-badge">5 New</span>
+								</li>
+								<li class="unread">
+									<div class="media">
+										<img class="mr-3 img-fluid" src="assets/images/user.png" alt="Generic placeholder image">
+										<div class="media-body">
+											<h5 class="mt-0">Media heading</h5>
+											Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="media">
+										<img class="mr-3 img-fluid" src="assets/images/user.png" alt="Generic placeholder image">
+										<div class="media-body">
+											<h5 class="mt-0">Media heading</h5>
+											Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="media">
+										<img class="mr-3 img-fluid" src="assets/images/user.png" alt="Generic placeholder image">
+										<div class="media-body">
+											<h5 class="mt-0">Media heading</h5>
+											Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+										</div>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li class="user-profile notifications">
+							<a href="#!">
+								<img src="assets/images/user.png" class="img-fluid" alt="">
+								<span>John Doe</span>
+								<i class="feather icon-chevron-down"></i>
+							</a>
+							<ul>
+								<li>
+									<a href="#!">
+										<i class="feather icon-settings"></i>
+										Settings
+									</a>
+								</li>
+								<li>
+									<a href="#!">
+										<i class="feather icon-user"></i>
+										Profile
+									</a>
+								</li>
+								<li>
+									<a href="#!">
+										<i class="feather icon-log-out"></i>
+										Logout
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- Top-header end -->
+	</div>
+	<!-- Theme main-wrapper end -->
+	<!-- Theme-menu start  -->
+	<aside>
+		<nav class="sd-menu">
+			<div class="profile-header">
+				<img src="assets/images/user.png" class="img-fluid img-thumbnail" alt="User-image">
+				<div class="user-details">
+					<p>John Doe</p>
+					<i class="feather icon-chevron-down"></i>
+				</div>
+			</div>
+			<ul class="menu-item list-unstyled">
+				<li class="active">
+					<a href="">
+						<span class="menu-icon">
+							<i class="feather icon-clipboard"></i>
+						</span>
+						<span class="menu-txt">
+							Form Componenets
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="plans.html">
+						<span class="menu-icon">
+							<i class="feather icon-unlock"></i>
+						</span>
+						<span class="menu-txt">
+							Plans
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="menu-icon">
+							<i class="feather icon-list"></i>
+						</span>
+						<span class="menu-txt">
+							Levels
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="menu-icon">
+							<i class="feather icon-award"></i>
+						</span>
+						<span class="menu-txt">
+							Schemes
+						</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</aside>
+	<!-- Main-body start -->
+	<div class="sd-main-body">
+		<div class="sd-body-wrapper">
+			<div class="page-header">
+				<h4>Form Components</h4>
+				<ul class="breadcrumb">
+					<li class="breadcrumb-item">
+						<a href="index.html">
+							<i class="feather icon-home"></i>
+						</a>
+					</li>
+					<li class="breadcrumb-item">
+						<a href="#!">Form Components</a>
+					</li>
+				</ul>
+			</div>
+			<div class="page-body">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="card">
+							<div class="card-header">
+								<h5>Input Form</h5>
+							</div>
+							<div class="card-body">
+								<!-- Material Input -->
+								<div class="form-group">
+									<input type="text" class="form-control md-form" placeholder="Material Input Form">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="card">
+							<div class="card-header">
+								<h5>Input Form with Validation</h5>
+							</div>
+							<div class="card-body">
+								<!-- Error message form -->
+								<input type="text" class="form-control md-form er-msg" placeholder="Validation Form">
+								<span>Please Fill Detail</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="card">
+							<div class="card-header">
+								<h5>Radio Button</h5>
+							</div>
+							<div class="card-body">
+								<!-- Radio Button start -->
+								<div class="form-radio">
+									<div class="radio radio-inline">
+										<label>
+											<input type="radio" name="radio" checked="checked">
+											<i class="helper"></i>Radio 1
+										</label>
+									</div>
+									<div class="radio radio-inline">
+										<label>
+											<input type="radio" name="radio">
+											<i class="helper"></i>Radio 2
+										</label>
+									</div>
+									<div class="radio radio-inline radio-disable">
+										<label>
+											<input type="radio" disabled="" name="radio">
+											<i class="helper"></i>Radio Disable
+										</label>
+									</div>
+								</div>
+								<!-- Radio Button end -->
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="card">
+							<div class="card-header">
+								<h5>Checkbox</h5>
+							</div>
+							<div class="card-body">
+								<!-- Checkbox start -->
+								<div class="border-checkbox-section">
+									<div class="border-checkbox-group border-checkbox-group-default">
+										<input class="border-checkbox" type="checkbox" id="checkbox0">
+										<label class="border-checkbox-label" for="checkbox0">Select Me</label>
+									</div>
+									<div class="border-checkbox-group border-checkbox-group-primary">
+										<input class="border-checkbox" type="checkbox" id="checkbox1">
+										<label class="border-checkbox-label" for="checkbox1">Select Me Too</label>
+									</div>
+									<div class="border-checkbox-group">
+										<input class="border-checkbox" type="checkbox" id="checkbox2" disabled>
+										<label class="border-checkbox-label" for="checkbox2">Disabled</label>
+									</div>
+								</div>
+								<!-- Checkbox end -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header">
+								<h5>Date-picker</h5>
+							</div>
+							<div class="card-body">
+								<!-- Date-picker -->
+								<input id="dropper-default" class="form-control" type="text" placeholder="Select your date" />
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header">
+								<h5>Theme-Button</h5>
+							</div>
+							<div class="card-body">
+								<!-- Theme-button -->
+								<button type="button" class="btn theme-btn" data-toggle="modal" data-target="#demoModal">
+									Press Me
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card">
+							<div class="card-header">
+								<h5>Drop-down</h5>
+							</div>
+							<div class="card-body">
+								<!-- Dropdown start -->
+								<div class="dropdown theme-dropdown">
+									<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Dropdown link
+									</a>
+
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<a class="dropdown-item" href="#">Action</a>
+										<a class="dropdown-item" href="#">Another action</a>
+										<a class="dropdown-item" href="#">Something else here</a>
+									</div>
+								</div>
+								<!-- Dropdown end -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-header">
+								<h5>Image Upload</h5>
+							</div>
+							<div class="card-body">
+								<!-- Image Upload Start -->
+								<div class="imageupload panel panel-default">
+									<div class="panel-heading clearfix">
+										<h3 class="panel-title float-left">Upload Image</h3>
+										<div class="btn-group float-right">
+											<button type="button" class="btn theme-btn active">File</button>
+											<button type="button" class="btn theme-btn">URL</button>
+										</div>
+									</div>
+									<div class="file-tab panel-body">
+										<div>
+											<label class="btn btn-outline-primary theme-outline-btn btn-file">
+												<span>Browse</span>
+												<!-- The file is stored here. -->
+												<input type="file" name="image-file">
+											</label>
+											<button type="button" class="btn btn-outline-danger">Remove</button>
+										</div>
+									</div>
+									<div class="url-tab panel-body">
+										<div class="input-group">
+											<input type="text" class="form-control hasclear" placeholder="Image URL">
+											<div class="input-group-btn">
+												<button type="button" class="btn theme-btn">Submit</button>
+											</div>
+										</div>
+										<button type="button" class="btn btn-default">Remove</button>
+										<!-- The URL is stored here. -->
+										<input type="hidden" name="image-url">
+									</div>
+								</div>
+								<!-- Image Upload end -->
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-header">
+								<h5>File Browser</h5>
+							</div>
+							<div class="card-body">
+								<input type="file" class="form-control">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Main-body end -->
+	<!-- Modal -->
+	<div class="modal fade" id="demoModal" tabindex="-1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Your Title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="text-center"><h2>Sparsh Design</h2></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn theme-btn">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Required js -->
+	<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<!-- <script type="text/javascript" src="assets/js/popper.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="assets/js/jquery.clickBubble.min.js"></script> -->
+	<!-- Date-dropper js -->
+	<script type="text/javascript" src="assets/plugins/datedropper/datedropper.min.js"></script>
+	<!-- Image-upload js -->
+	<script type="text/javascript" src="assets/plugins/image-upload/bootstrap-imageupload.min.js"></script>
+
+	<!-- Custom Script -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// $('html').clickBubble({
+			// 	color: '#000',
+			// 	size: 40,
+			// 	time: 1000,
+			// 	borderWidth: 3
+			// });
+			// Date-dropper js start
+			$("#dropper-default").dateDropper( {
+				dropWidth: 200,
+				dropPrimaryColor: "#689F38",
+				dropBorder: "1px solid #689F38"
+			});
+			// Image-upload js start
+			var $imageupload = $('.imageupload');
+			$imageupload.imageupload();
+
+			$('#imageupload-disable').on('click', function() {
+				$imageupload.imageupload('disable');
+				$(this).blur();
+			})
+
+			$('#imageupload-enable').on('click', function() {
+				$imageupload.imageupload('enable');
+				$(this).blur();
+			})
+
+			$('#imageupload-reset').on('click', function() {
+				$imageupload.imageupload('reset');
+				$(this).blur();
+			});
+		});
+
+	</script>
+</body>
+</html>

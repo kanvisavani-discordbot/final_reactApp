@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Admin Panel</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Theme-fonts -->
+	<link rel="stylesheet" href="assets/css/feather.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+	<!-- Data Table Css -->
+	<link rel="stylesheet" type="text/css" href="assets/plugins/data-table/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/plugins/data-table/css/buttons.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/plugins/data-table/css/responsive.bootstrap4.min.css">
+	<!-- Required css -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+	<!-- Theme main-wrapper start -->
+	<div class="sd-main-wrapper">
+		<!-- Top-header start -->
+		<nav class="sd-header-navbar">
+			<div class="header-wrapper">
+				<div class="header-logo">
+					<img class="img-fluid theme-logo" src="assets/images/logo.png" alt="Theme-logo">
+				</div>
+				<div class="header-container container-fluid">
+					<ul class="float-left list-unstyled">
+						<li>
+							<a href="#!">
+								<i class="feather icon-search"></i>
+							</a>
+						</li>
+					</ul>
+					<ul class="float-right list-unstyled">
+						<li class="notifications">
+							<a class="bell-noti" href="#!">
+								<i class="feather icon-bell"></i>
+								<span class="badge sd-badge">2</span>
+							</a>
+							<ul>
+								<li class="heading">
+									NOTIFICATIONS<span class="badge sd-badge">5 New</span>
+								</li>
+								<li class="unread">
+									<div class="media">
+										<img class="mr-3 img-fluid" src="assets/images/user.png" alt="Generic placeholder image">
+										<div class="media-body">
+											<h5 class="mt-0">Media heading</h5>
+											Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="media">
+										<img class="mr-3 img-fluid" src="assets/images/user.png" alt="Generic placeholder image">
+										<div class="media-body">
+											<h5 class="mt-0">Media heading</h5>
+											Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="media">
+										<img class="mr-3 img-fluid" src="assets/images/user.png" alt="Generic placeholder image">
+										<div class="media-body">
+											<h5 class="mt-0">Media heading</h5>
+											Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+										</div>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li class="user-profile notifications">
+							<a href="#!">
+								<img src="assets/images/user.png" class="img-fluid" alt="">
+								<span>John Doe</span>
+								<i class="feather icon-chevron-down"></i>
+							</a>
+							<ul>
+								<li>
+									<a href="#!">
+										<i class="feather icon-settings"></i>
+										Settings
+									</a>
+								</li>
+								<li>
+									<a href="#!">
+										<i class="feather icon-user"></i>
+										Profile
+									</a>
+								</li>
+								<li>
+									<a href="#!">
+										<i class="feather icon-log-out"></i>
+										Logout
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- Top-header end -->
+	</div>
+	<!-- Theme main-wrapper end -->
+	<!-- Theme-menu start  -->
+	<aside>
+		<nav class="sd-menu">
+			<div class="profile-header">
+				<img src="assets/images/user.png" class="img-fluid img-thumbnail" alt="User-image">
+				<div class="user-details">
+					<p>John Doe</p>
+					<i class="feather icon-chevron-down"></i>
+				</div>
+			</div>
+			<ul class="menu-item list-unstyled">
+				<li>
+					<a href="index.html">
+						<span class="menu-icon">
+							<i class="feather icon-clipboard"></i>
+						</span>
+						<span class="menu-txt">
+							Form Componenets
+						</span>
+					</a>
+				</li>
+				<li class="active">
+					<a href="plans.html">
+						<span class="menu-icon">
+							<i class="feather icon-unlock"></i>
+						</span>
+						<span class="menu-txt">
+							Plans
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="menu-icon">
+							<i class="feather icon-list"></i>
+						</span>
+						<span class="menu-txt">
+							Levels
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span class="menu-icon">
+							<i class="feather icon-award"></i>
+						</span>
+						<span class="menu-txt">
+							Schemes
+						</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</aside>
+	<!-- Main-body start -->
+	<div class="sd-main-body">
+		<div class="sd-body-wrapper">
+			<div class="page-header">
+				<h4>Plans</h4>
+				<ul class="breadcrumb">
+					<li class="breadcrumb-item">
+						<a href="index.html">
+							<i class="feather icon-home"></i>
+						</a>
+					</li>
+					<li class="breadcrumb-item">
+						<a href="#!">Plans</a>
+					</li>
+				</ul>
+			</div>
+			<div class="page-body">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-header">
+								<h5>Add Your Plans</h5>
+							</div>
+							<div class="card-body">
+								<form class="center-form" action="">
+									<div class="form-group">
+										<label for="">Plan Name</label>
+										<input type="text" class="form-control md-form" placeholder="Enter Plan Name">
+									</div>
+									<div class="form-group">
+										<label for="">Priority</label>
+										<input type="text" class="form-control md-form" placeholder="Enter Plan Priority">
+									</div>
+									<div class="text-center">
+										<button type="button" class="btn theme-btn" >
+											Add Plan
+										</button>
+										<button type="reset" class="btn btn-danger" >
+											Clear Data
+										</button>
+									</div>
+								</form>
+								<div class="dt-responsive table-responsive">
+									<table id="simpletable" class="table table-striped table-bordered nowrap">
+										<thead>
+											<tr>
+												<th>Plan Name</th>
+												<th>Priority</th>
+												<th>Add</th>
+												<th>Edit</th>
+												<th>Delete</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Plan 1</td>
+												<td>High</td>
+												<td><i class="feather icon-plus btn add-btn" data-toggle="modal" data-target="#addModal"></i></td>
+												<td><i class="feather icon-edit-2 btn edit-btn"></i></td>
+												<td><i class="feather icon-trash btn del-btn" data-toggle="modal" data-target="#delModal"></i></td>
+											</tr>
+											<tr>
+												<td>Plan 2</td>
+												<td>Medium</td>
+												<td><i class="feather icon-plus btn add-btn"></i></td>
+												<td><i class="feather icon-edit-2 btn edit-btn"></i></td>
+												<td><i class="feather icon-trash btn del-btn"></i></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Main-body end -->
+	<!-- Add Modal -->
+	<div class="modal fade" id="addModal" tabindex="-1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Add Level or Schemes</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="">
+						<div class="form-group">
+							<div class="form-group">
+								<label for="">Add Data</label>
+								<select name="" id="" class="form-control">
+									<option value="">1</option>
+									<option value="">2</option>
+									<option value="">3</option>
+									<option value="">4</option>
+								</select>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn theme-btn">Add Plan</button>
+					<button type="reset" class="btn btn-danger">Reset</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Delete Modal -->
+	<div class="modal fade" id="delModal" tabindex="-1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Delete Your Record</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="text-center"><h2>Are you sure to delete your plan?</h2></div>
+				</div>
+				<div class="modal-footer justify-content-center">
+					<button type="button" class="btn theme-btn">Yes</button>
+					<button type="reset" class="btn btn-danger">No</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Required js -->
+	<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<!-- <script type="text/javascript" src="assets/js/popper.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="assets/js/jquery.clickBubble.min.js"></script> -->
+	<!-- Data Table js -->
+	<script src="assets/plugins/data-table/js/jquery.dataTables.min.js"></script>
+	<script src="assets/plugins/data-table/js/dataTables.buttons.min.js"></script>
+	<script src="assets/plugins/data-table/js/buttons.html5.min.js"></script>
+	<script src="assets/plugins/data-table/js/dataTables.bootstrap4.min.js"></script>
+	<script src="assets/plugins/data-table/js/dataTables.responsive.min.js"></script>
+	<script src="assets/plugins/data-table/js/responsive.bootstrap4.min.js"></script>
+	<!-- Custom script -->
+	<script>
+		$('#simpletable').DataTable();
+	</script>
+
+</body>
+</html>
