@@ -1,11 +1,11 @@
 import React from 'react';
-import './Plans.css';
+import './Levels.css';
 import DataTable from 'react-data-table-component';
-import PlanForm from './PlanForm';
-import PlanTable from './PlanTable';
+import LevelForm from './LevelForm';
+import LevelTable from './LevelTable';
 import {Link} from 'react-router-dom';
 
-export const Plans = () => {
+export const Levels = () => {
     return (
         <div>
             <div className="sd-main-wrapper">
@@ -109,7 +109,7 @@ export const Plans = () => {
                             </div>
                     </div>
                     <ul className="menu-item list-unstyled">
-                        <li className="active">
+                        <li>
                             <Link to="/plans">
 						<span className="menu-icon">
 							<i className="feather icon-unlock"></i>
@@ -119,7 +119,7 @@ export const Plans = () => {
 						</span>
                             </Link>
                         </li>
-                        <li>
+                        <li className="active">
                             <Link to="/levels">
 						<span className="menu-icon">
 							<i className="feather icon-list"></i>
@@ -130,7 +130,7 @@ export const Plans = () => {
                             </Link>
                         </li>
                         <li>
-                        <Link to="/schemes">
+                            <Link to="/schemes">
 						<span className="menu-icon">
 							<i className="feather icon-award"></i>
 						</span>
@@ -161,11 +161,11 @@ export const Plans = () => {
                             <div className="col-md-12">
                                 <div className="card">
                                     <div className="card-header">
-                                        <h5>Add Your Plans</h5>
+                                        <h5>Add Your Levels</h5>
                                     </div>
                                     <div className="card-body">
-                                        <PlanForm/>
-                                       <PlanTable/>
+                                        <LevelForm/>
+                                       <LevelTable/>
                                     </div>
                                 </div>
                             </div>
@@ -198,7 +198,7 @@ export const Plans = () => {
                             </form>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="btn theme-btn">Add Plan</button>
+                            <button type="button" className="btn theme-btn">Add Level</button>
                             <button type="reset" className="btn btn-danger">Reset</button>
                         </div>
                     </div>
@@ -214,7 +214,7 @@ export const Plans = () => {
                             </button>
                         </div>
                         <div className="modal-body">
-                            <div className="text-center"><h2>Are you sure to delete your plan?</h2></div>
+                            <div className="text-center"><h2>Are you sure to delete your level?</h2></div>
                         </div>
                         <div className="modal-footer justify-content-center">
                             <button type="button" className="btn theme-btn">Yes</button>
