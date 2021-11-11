@@ -1,0 +1,15 @@
+.modal{
+	.modal-header{
+		border-bottom:3px solid $theme-color;
+		h5{
+			font-size: 18px;
+			font-weight: 600;
+		}
+	}
+	.modal-body{
+		form{
+			padding: 20px;
+			border:1px solid #ddd;
+		}
+	}
+}

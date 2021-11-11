@@ -1,0 +1,149 @@
+/*===== General css start =====*/
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: #ECF0F5;
+	color: #666;
+}
+
+p{
+	font-size: 14px;
+	line-height:24px;
+}
+
+* a:hover ,* a:focus{
+	text-decoration: none;
+}
+.color-w{
+	color: #FFF;
+}
+.card{
+	box-shadow: 0 2px 10px -1px rgba(69,90,100,.3);
+	border-radius:4px;
+	margin-bottom: 30px;
+	.card-header{
+		background-color: #fff;
+		h5{
+			font-size: 15px;
+			font-weight: 600;
+			color: $txt-color;
+			display: inline-block;
+		}
+	}
+}
+.btn{
+	font-size: 14px;
+}
+.theme-btn{
+	font-size: 14px;
+	padding: .375rem 1.75rem;
+	background: $theme-color;
+	border-color: $theme-color;
+	color: #FFF;
+	&:hover,&:active,&:not(:disabled):not(.disabled):active{
+		background: darken($theme-color,10%);
+		border-color: darken($theme-color,10%);
+		color: #FFF;
+	}
+	&:focus,&:not(:disabled):not(.disabled):active:focus{
+		box-shadow:0 0 0 0.2rem rgba($theme-rgb, $alpha);
+	}
+}
+a.theme-btn{
+	@extend .theme-btn;
+	-webkit-appearance:none;
+}
+.theme-outline-btn{
+	border-color:$theme-color;
+	color: $theme-color;
+	&:hover{
+		background: $theme-color;
+		border-color:$theme-color;
+	}
+}
+.btn-group{
+	.theme-btn.active{
+		background: darken($theme-color,10%);
+	}
+}
+.input-group{
+	.theme-btn{
+		border-radius:0;
+	}
+}
+.sd-badge{
+	background: $theme-color;
+	font-size: 12px;
+	color: #FFF;
+}
+.table td, .table th{
+	border:none;
+}
+div.dataTables_wrapper div.dataTables_paginate ul.pagination{
+	float: right;
+}
+.page-item.active .page-link {
+	z-index: 1;
+	color: #fff;
+	background-color: $theme-color;
+	border-color: $theme-color;
+}
+.add-btn{
+	background: $theme-color;
+	color: #FFF;
+	transition:.5s;
+	box-shadow:0 2px 5px 1px rgba(0, 0, 0, 0.3);
+	&:hover,&:focus{
+		background: lighten($theme-color,2%);
+		box-shadow:0 4px 11px 0px rgba(0, 0, 0, 0.375);
+	}
+}
+.edit-btn{
+	background: $edit-btn;
+	color: #FFF;
+	transition:.5s;
+	box-shadow:0 2px 5px 1px rgba(0, 0, 0, 0.3);
+	&:hover,&:focus{
+		background: lighten($edit-btn,2%);
+		box-shadow:0 4px 11px 0px rgba(0, 0, 0, 0.375);
+	}
+}
+.del-btn{
+	background: $del-btn;
+	color: #FFF;
+	transition:.5s;
+	box-shadow:0 2px 5px 1px rgba(0, 0, 0, 0.3);
+	&:hover,&:focus{
+		background: lighten($del-btn,2%);
+		box-shadow:0 4px 11px 0px rgba(0, 0, 0, 0.375);
+	}
+}
+.mini-edit{
+	@extend .edit-btn;
+	padding: 2px 7px;
+	font-size: 11px;
+}
+.mini-del{
+	@extend .del-btn;
+	padding: 2px 7px;
+	font-size: 11px;
+}
+.btn-danger{
+	font-size: 14px;
+	padding: .375rem 1.75rem;
+	background: darken($del-btn,20%);
+	border-color: darken($del-btn,20%);
+	color: #FFF;
+	&:hover,&:active,&:not(:disabled):not(.disabled):active{
+		background: darken($del-btn,18%);
+		border-color: darken($del-btn,18%);
+		color: #FFF;
+	}
+	&:focus,&:not(:disabled):not(.disabled):active:focus{
+		box-shadow:0 0 0 0.2rem rgba($del-btn,$alpha);
+	}
+}
+.d-flex{
+	@include d-flex;
+}
+/*===== General css end =====*/

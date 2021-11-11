@@ -1,0 +1,136 @@
+/*===== Top-header start =====*/
+.sd-header-navbar{
+	background: $theme-bg;
+	min-height: 60px;
+	position: fixed;
+	top: 0;
+	z-index: 999;
+	width: 100%;
+	.header-logo{
+		float: left;
+		height: 60px;
+		width: 230px;
+		padding: 10px;
+		text-align: center;
+		// background: darken($theme-color,5%);
+		img{
+			width: 70px;
+		}
+	}
+	.header-container{
+		ul{
+			margin-bottom:0;
+		}
+		li{
+			line-height:3.7;
+			padding: 0 20px;
+			display: inline-block;
+			>a{
+				color: #FFF;
+			}
+		}
+		.user-profile{
+			img{
+				width: 40px;
+				border-radius: 100%;
+				// box-shadow: 0px 0px 2px 1px #fff;
+			}
+			span{
+				font-size: 13px;
+				margin-left: 10px;
+			}
+			i{
+				font-size: 10px;
+				margin-left: 10px;
+			}
+		}
+	}
+	.bell-noti{
+		position: relative;
+		.sd-badge{
+			position: absolute;
+			top: -8px;
+			left: 9px;
+			border-radius: 50px;
+		}
+	}
+	.notifications{
+		position: relative;
+		ul{
+			padding-left: 0;
+			position: absolute;
+			background:#fff;
+			width: 24em;
+			right: 0;
+			border:1px solid $theme-color;
+			border-top:5px solid $theme-color;
+			box-shadow:0 2px 10px -1px rgba(69, 90, 100, 0.3);
+			transform: translateY(30px);
+			visibility: hidden;
+			opacity: 0;
+			transition:.5s;
+			li{
+				line-height: 24px;
+				font-size: 12px;
+				color: $txt-color;
+				padding: 15px;
+				border-bottom:1px solid #ddd;
+				&:last-child{
+					border-bottom:none;
+				}
+				&.heading{
+					display: block;
+					padding: 10px 15px;
+					font-weight: 600;
+					font-size: 14px;
+					.sd-badge{
+						float: right;
+						position: relative;
+						top: 4px;
+					}
+				}
+				&.unread{
+					background: $theme-color;
+					color: #FFF;
+				}
+				h5{
+					font-size: 14px;
+					font-weight: 600;
+				}
+				img{
+					width: 40px;
+				}
+			}
+		}
+		&:hover{
+			ul{
+				transform: translateY(0px);
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+	.user-profile{
+		ul{
+			width: 17em;
+			li{
+				font-size: 14px;
+				display: block;
+				padding: 10px 15px;
+				transition:.5s;
+				&:hover{
+					background: #F1F1F1;
+				}
+			}
+			a{
+				color: $txt-color;
+				i{
+					font-size: 14px !important;
+					margin-left: 0 !important;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+}
+/* ===== Top-header end ===== */

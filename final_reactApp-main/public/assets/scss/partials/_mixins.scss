@@ -1,0 +1,13 @@
+@mixin theme-keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+@mixin d-flex{
+	display:flex;
+	align-items:center;
+}
