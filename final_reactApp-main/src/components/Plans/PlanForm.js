@@ -4,26 +4,24 @@ import './Plans.css';
 
 const PlanForm =()=> {
 
-   const [planName,priority]=useState();
+    const [name, setplanName] = useState('');
+    const [priority, setpriority] = useState('');
 
   const submitHandler=(e)=>{
         e.preventDefault()
-        axios.post("http://localhost:9191/createPlan",this.state)
+        axios.post("http://localhost:9191/createPlan",{name,priority})
     }
 
-  const changeHandler=(e)=>{
-        this.setState({[e.target.name]:e.target.value})
-    }
     return (
         <div>
             <form className="center-form" onSubmit={submitHandler}>
                                             <div className="form-group">
                                                 <input type="text" className="form-control md-form" name="name"
-                                                       placeholder="Enter Plan Name" value={planName} onChange={changeHandler}/>
+                                                       placeholder="Enter Plan Name" value={name} onChange={e => setplanName(e.target.value)}/>
                                             </div>
                                             <div className="form-group">
                                                 <input type="text" className="form-control md-form" name="priority"
-                                                       placeholder="Enter Plan Priority" value={priority} onChange={changeHandler}/>
+                                                       placeholder="Enter Plan Priority" value={priority} onChange={e => setpriority(e.target.value)}/>
                                             </div>
                                             <div className="text-center">
                                                 <button type="submit" className="btn theme-btn">
