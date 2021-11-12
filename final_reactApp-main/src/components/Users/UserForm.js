@@ -4,7 +4,7 @@ import './Users.css';
 
 const UserForm =()=> {
 
-    const [name, setplanName] = useState('');
+    const [name, setuserName] = useState('');
     const [priority, setpriority] = useState('');      
     const [planId, setplanId] = useState(''); 
     const [data, setData] = useState([]);

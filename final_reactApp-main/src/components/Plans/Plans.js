@@ -38,7 +38,7 @@ export const Plans = () => {
                         </div>
                     </div>
                 </div>
-            </div>        
+            </div>       
         </div>
     );
 }

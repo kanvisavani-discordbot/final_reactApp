@@ -3,8 +3,7 @@ import {Link} from 'react-router-dom';
 
 export const Master = () => {
     return (
-        <div>
-            
+        <div>            
             <div className="sd-main-wrapper">
                 <nav className="sd-header-navbar">
                     <div className="header-wrapper">
