@@ -1,7 +1,12 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import {Link} from 'react-router-dom';
 
 export const Master = () => {
+    const [isPlanActive, setPlanActive] = useState("true");
+    const [isLevelActive, setLevelActive] = useState("false");
+    const [isSchemeActive, setSchemeActive] = useState("false");
+    const [isUserActive, setUserActive] = useState("false");
+
     return (
         <div>            
             <div className="sd-main-wrapper">
@@ -10,59 +15,8 @@ export const Master = () => {
                         <div className="header-logo">
                             <img className="img-fluid theme-logo" src="assets/images/logo.png" alt="Theme-logo"/>
                         </div>
-                        <div className="header-container container-fluid">
-                            <ul className="float-left list-unstyled">
-                                <li>
-                                    <a href="#!">
-                                        <i className="feather icon-search"></i>
-                                    </a>
-                                </li>
-                            </ul>
+                        <div className="header-container container-fluid">                            
                             <ul className="float-right list-unstyled">
-                                <li className="notifications">
-                                    <a className="bell-noti" href="#!">
-                                        <i className="feather icon-bell"></i>
-                                        <span className="badge sd-badge">2</span>
-                                    </a>
-                                    <ul>
-                                        <li className="heading">
-                                            NOTIFICATIONS<span className="badge sd-badge">5 New</span>
-                                        </li>
-                                        <li className="unread">
-                                            <div className="media">
-                                                <img className="mr-3 img-fluid" src="assets/images/user.png"
-                                                     alt="Generic placeholder image" />
-                                                    <div className="media-body">
-                                                        <h5 className="mt-0">Media heading</h5>
-                                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-                                                        scelerisque ante sollicitudin.
-                                                    </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="media">
-                                                <img className="mr-3 img-fluid" src="assets/images/user.png"
-                                                     alt="Generic placeholder image"/>
-                                                    <div className="media-body">
-                                                        <h5 className="mt-0">Media heading</h5>
-                                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-                                                        scelerisque ante sollicitudin.
-                                                    </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="media">
-                                                <img className="mr-3 img-fluid" src="assets/images/user.png"
-                                                     alt="Generic placeholder image"/>
-                                                    <div className="media-body">
-                                                        <h5 className="mt-0">Media heading</h5>
-                                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-                                                        scelerisque ante sollicitudin.
-                                                    </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
                                 <li className="user-profile notifications">
                                     <a href="#!">
                                         <img src="assets/images/user.png" className="img-fluid" alt=""/>
@@ -83,10 +37,10 @@ export const Master = () => {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#!">
+                                            <Link to="/login">
                                                 <i className="feather icon-log-out"></i>
                                                 Logout
-                                            </a>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </li>
@@ -105,7 +59,12 @@ export const Master = () => {
                             </div>
                     </div>
                     <ul className="menu-item list-unstyled">
-                        <li className="active">
+                        <li className={isPlanActive=="true" ? 'active' : null} onClick={
+                            ()=>{
+                            setLevelActive("false");
+                            setPlanActive("true");
+                            setSchemeActive("false");
+                            }}>
                             <Link to="/plans">
 						<span className="menu-icon">
 							<i className="feather icon-unlock"></i>
@@ -115,7 +74,13 @@ export const Master = () => {
 						</span>
                             </Link>
                         </li>
-                        <li>
+                        <li className={isLevelActive=="true" ? 'active' : null} onClick={
+                            ()=>{
+                            setLevelActive("true");
+                            setPlanActive("false");
+                            setSchemeActive("false");
+                            setUserActive("false");
+                            }}>
                             <Link to="/levels">
 						<span className="menu-icon">
 							<i className="feather icon-list"></i>
@@ -125,13 +90,37 @@ export const Master = () => {
 						</span>
                             </Link>
                         </li>
-                        <li>
+                        <li className={isSchemeActive=="true" ? 'active' : null}  onClick={
+                            ()=>{
+                            setLevelActive("false");
+                            setPlanActive("false");
+                            setSchemeActive("true");
+                            setUserActive("false");
+                            }
+                            }>
                         <Link to="/schemes">
 						<span className="menu-icon">
 							<i className="feather icon-award"></i>
 						</span>
                                 <span className="menu-txt">
 							Schemes
+						</span>
+                            </Link>
+                        </li>
+                        <li className={isUserActive=="true" ? 'active' : null}  onClick={
+                            ()=>{
+                            setLevelActive("false");
+                            setPlanActive("false");
+                            setSchemeActive("false");
+                            setUserActive("true");
+                            }
+                            }>
+                        <Link to="/users">
+						<span className="menu-icon">
+							<i className="feather icon-user"></i>
+						</span>
+                                <span className="menu-txt">
+							Users
 						</span>
                             </Link>
                         </li>

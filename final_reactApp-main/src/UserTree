@@ -1,0 +1,13 @@
+import React, { useState } from 'react';
+import MyChart from './MyChart';
+
+function UserTree() {
+  
+    return (
+      <div>
+              <MyChart/>
+      </div>
+    );
+  }
+
+export default UserTree;

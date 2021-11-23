@@ -1,8 +1,6 @@
 import React from 'react';
 import './Users.css';
-import DataTable from 'react-data-table-component';
 import UserForm from './UserForm';
-import {Link} from 'react-router-dom';
 import { Master } from '../Master';
 
 export const Users = () => {
