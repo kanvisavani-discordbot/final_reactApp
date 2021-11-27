@@ -6,7 +6,7 @@ export const Master = () => {
     const [isLevelActive, setLevelActive] = useState("false");
     const [isSchemeActive, setSchemeActive] = useState("false");
     const [isUserActive, setUserActive] = useState("false");
-
+  
     return (
         <div>            
             <div className="sd-main-wrapper">
@@ -19,25 +19,33 @@ export const Master = () => {
                             <ul className="float-right list-unstyled">
                                 <li className="user-profile notifications">
                                     <a href="#!">
-                                        <img src="assets/images/user.png" className="img-fluid" alt=""/>
-                                            <span>John Doe</span>
+                                        <img src={"assets/images/"+JSON.parse(sessionStorage.token).img} className="img-fluid" alt=""/>
+                                            <span>{JSON.parse(sessionStorage.token).name}</span>
                                             <i className="feather icon-chevron-down"></i>
                                     </a>
                                     <ul>
                                         <li>
-                                            <a href="#!">
-                                                <i className="feather icon-settings"></i>
-                                                Settings
-                                            </a>
+                                    <Link to="/setting">
+						<span className="menu-icon">
+							<i className="feather icon-unlock"></i>
+						</span>
+                                <span className="menu-txt">
+                                Setting
+						</span>
+                            </Link>
+                            </li>
+                                        <li>
+                                        <Link to="/profile">
+						<span className="menu-icon">
+							<i className="feather icon-unlock"></i>
+						</span>
+                                <span className="menu-txt">
+							Profile
+						</span>
+                            </Link>
                                         </li>
                                         <li>
-                                            <a href="#!">
-                                                <i className="feather icon-user"></i>
-                                                Profile
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <Link to="/login">
+                                            <Link to="/" onClick={e => sessionStorage.removeItem('token')}>
                                                 <i className="feather icon-log-out"></i>
                                                 Logout
                                             </Link>
@@ -52,9 +60,9 @@ export const Master = () => {
             <aside>
                 <nav className="sd-menu">
                     <div className="profile-header">
-                        <img src="assets/images/user.png" className="img-fluid img-thumbnail" alt="User-image"/>
+                        <img src={"assets/images/"+JSON.parse(sessionStorage.token).img} className="img-fluid img-thumbnail" alt="User-image"/>
                             <div className="user-details">
-                                <p>John Doe</p>
+                                <p>{JSON.parse(sessionStorage.token).name}</p>
                                 <i className="feather icon-chevron-down"></i>
                             </div>
                     </div>

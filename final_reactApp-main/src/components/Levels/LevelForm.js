@@ -10,6 +10,7 @@ const LevelForm =()=> {
     const [levelId, setLevelId] = useState(''); 
     const [data, setData] = useState([]);
     const [isMode,setIsMode]=useState(true);
+    const [isSubmit,setIsSubmit]=useState(false);
 
         useEffect(() => {
             axios.get("http://localhost:9191/allLevels").then(Response => setData(Response.data))
@@ -17,7 +18,10 @@ const LevelForm =()=> {
 
   const submitHandler=(e)=>{
         e.preventDefault()
-        debugger;
+        if(name==''||priority==''||member==''){
+            setIsSubmit(true);
+            return;
+        }
         if(isMode)
         {axios.post("http://localhost:9191/createLevel",{name,priority,member})
         .then((response) => {
@@ -39,6 +43,7 @@ const LevelForm =()=> {
     }
 
     const clearData=()=>{
+        setIsSubmit(false)
         setIsMode(true)
         setlevelName('')
         setmember('')
@@ -87,20 +92,23 @@ const LevelForm =()=> {
         <div>
             <form className="center-form" onSubmit={submitHandler}>
                                             <div className="form-group">
-                                                <input type="text" className="form-control md-form" name="name"
+                                                <input type="text" className={"form-control md-form " + (name==''&&isSubmit ? 'er-msg' : '')} name="name"
                                                        placeholder="Enter level Name" value={name} onChange={e => setlevelName(e.target.value)}/>
+                                            <span className={name==''&&isSubmit ? '' : 'd-none'}>Please enter name</span>
                                             </div>
                                             <div className="form-group">
-                                                <input type="text" className="form-control md-form" name="member"
+                                                <input type="text" className={"form-control md-form " + (member==''&&isSubmit ? 'er-msg' : '')} name="member"
                                                        placeholder="Enter Member" value={member} onChange={e => setmember(e.target.value)}/>
+                                            <span className={member==''&&isSubmit ? '' : 'd-none'}>Please enter member</span>
                                             </div>
                                             <div className="form-group">
-                                            <select name="priority" value={priority} onChange={e => setpriority(e.target.value)} className="form-control">
+                                            <select name="priority" value={priority} onChange={e => setpriority(e.target.value)} className={"form-control " + (priority==''&&isSubmit ? 'er-msg' : '')}>
                                             <option value="">Select Priority</option>
                                             <option value="High">High</option>
                                             <option value="Medium">Medium</option>
                                             <option value="Low">Low</option>
                                         </select>
+                                        <span className={priority==''&&isSubmit ? '' : 'd-none'}>Please select priority</span>
                                             </div>
                                             <div className="text-center">
                                                 <button type="submit" className="btn theme-btn">
@@ -123,7 +131,7 @@ const LevelForm =()=> {
                     <tbody>{renderTable()}</tbody>
                 </table>
             </div>
-            <div className="modal fade" id="delModal" tabIndex="-1">
+            <div className="modal" id="delModal" tabIndex="-1">
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
                         <div className="modal-header">
@@ -136,7 +144,7 @@ const LevelForm =()=> {
                             <div className="text-center"><h2>Are you sure to delete your level?</h2></div>
                         </div>
                         <div className="modal-footer justify-content-center">
-                            <button type="button" className="btn theme-btn" onClick={deleteData}>Yes</button>
+                            <button type="button" className="btn theme-btn" data-dismiss="modal" onClick={deleteData}>Yes</button>
                             <button type="reset" data-dismiss="modal" className="btn btn-danger">No</button>
                         </div>
                     </div>

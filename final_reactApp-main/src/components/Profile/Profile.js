@@ -1,9 +1,9 @@
 import React from 'react';
-import './Plans.css';
-import PlanForm from './PlanForm';
+import './Profiles.css';
+import ProfileForm from './ProfileForm';
 import { Master } from '../Master';
 
-export const Plans = () => {
+export const Profile = () => {
     return (
         <div>
             <Master/>
@@ -12,12 +12,7 @@ export const Plans = () => {
                     <div className="page-header">
                         <ul className="breadcrumb">
                             <li className="breadcrumb-item">
-                                <a href="index.html">
-                                    <i className="feather icon-home"></i>
-                                </a>
-                            </li>
-                            <li className="breadcrumb-item">
-                                <a href="#!">Plans</a>
+                                <a href="#!">Profile</a>
                             </li>
                         </ul>
                     </div>
@@ -26,10 +21,10 @@ export const Plans = () => {
                             <div className="col-md-12">
                                 <div className="card">
                                     <div className="card-header">
-                                        <h5>Add Your Plans</h5>
+                                        <h5>Update Your Profile</h5>
                                     </div>
                                     <div className="card-body">
-                                        <PlanForm/>
+                                        <ProfileForm/>
                                     </div>
                                 </div>
                             </div>

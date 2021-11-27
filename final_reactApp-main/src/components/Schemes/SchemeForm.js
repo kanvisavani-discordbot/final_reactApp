@@ -8,6 +8,7 @@ const SchemeForm =()=> {
     const [schemeId, setschemeId] = useState(''); 
     const [data, setData] = useState([]);
     const [isMode,setIsMode]=useState(true);
+    const [isSubmit,setIsSubmit]=useState(false);
 
         useEffect(() => {
             axios.get("http://localhost:9191/allSchemes").then(Response => setData(Response.data))
@@ -15,7 +16,10 @@ const SchemeForm =()=> {
 
   const submitHandler=(e)=>{
         e.preventDefault()
-        debugger;
+        if(name==''){
+            setIsSubmit(true);
+            return;
+        }
         if(isMode)
         {axios.post("http://localhost:9191/createScheme",{name})
         .then((response) => {
@@ -37,6 +41,7 @@ const SchemeForm =()=> {
     }
 
     const clearData=()=>{
+        setIsSubmit(false)
         setIsMode(true)
         setschemeName('')
     }
@@ -79,8 +84,9 @@ const SchemeForm =()=> {
         <div>
             <form className="center-form" onSubmit={submitHandler}>
                                             <div className="form-group">
-                                                <input type="text" className="form-control md-form" name="name"
+                                                <input type="text" className={"form-control md-form " + (name==''&&isSubmit ? 'er-msg' : '')} name="name"
                                                        placeholder="Enter scheme Name" value={name} onChange={e => setschemeName(e.target.value)}/>
+                                            <span className={name==''&&isSubmit ? '' : 'd-none'}>Please enter scheme name</span>
                                             </div>
                                             <div className="text-center">
                                                 <button type="submit" className="btn theme-btn">
@@ -114,7 +120,7 @@ const SchemeForm =()=> {
                             <div className="text-center"><h2>Are you sure to delete your scheme?</h2></div>
                         </div>
                         <div className="modal-footer justify-content-center">
-                            <button type="button" className="btn theme-btn" onClick={deleteData}>Yes</button>
+                            <button type="button" className="btn theme-btn" data-dismiss="modal" onClick={deleteData}>Yes</button>
                             <button type="reset" data-dismiss="modal" className="btn btn-danger">No</button>
                         </div>
                     </div>
